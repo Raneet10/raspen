@@ -1,0 +1,23 @@
+[package]
+name = "raspen-storage"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+# Enable the RocksDB backend (requires clang / libclang to build librocksdb-sys).
+# Disabled by default so the workspace builds in environments without LLVM.
+rocksdb-backend = ["dep:rocksdb"]
+
+[dependencies]
+raspen-types = { path = "../types" }
+rocksdb      = { workspace = true, optional = true }
+bincode      = { workspace = true }
+serde        = { workspace = true }
+sha2         = { workspace = true }
+anyhow       = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }
+
+[lints]
+workspace = true

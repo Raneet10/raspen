@@ -1,0 +1,17 @@
+[package]
+name = "raspen-consensus"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+raspen-types   = { path = "../types" }
+raspen-storage = { path = "../storage" }
+anyhow         = { workspace = true }
+tracing        = { workspace = true }
+tokio          = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }
+
+[lints]
+workspace = true
