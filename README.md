@@ -36,9 +36,9 @@ cargo test --workspace
 cargo build --workspace --features raspen-storage/rocksdb-backend
 
 # Lint
-cargo clippy --workspace -- -D warnings
+cargo clippy --workspace --all-targets -- -D warnings -D clippy::pedantic
 ```
 
 ## Formal specification
 
-The protocol is derived from a Quint formal specification in `../specs/aspen.qnt`.
+The protocol is derived from a Quint formal specification in `specs/aspen.qnt`.

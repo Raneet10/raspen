@@ -1,8 +1,5 @@
 // Sequencer proxy — assigns ETAs and broadcasts `Speculate` messages.
 //
-// Decision D1 (DECISIONS.md): backing store is `tokio::sync::broadcast`.
-// No external broker (Kafka / RabbitMQ) needed for iteration 1.
-//
 // The sequencer sits outside the consensus protocol:
 //   client op → Sequencer::submit → broadcast::Sender<Message::Speculate>
 //                                            ↓ (all replicas subscribed)
